@@ -1,14 +1,14 @@
 ##Basic python ##
 
-# name="Nisha"
-# age=25
-# salary=50000.0
-# is_working=True
+name="Nisha"
+age=25
+salary=50000.0
+is_working=True
 
-# Print(name)
-# Print(age)
-# print(salary)
-# print(is_working)
+Print(name)
+Print(age)
+print(salary)
+print(is_working)
 
 
 ## create dataset ##
@@ -33,8 +33,8 @@ employees=[
 # 4)Youngest Person
 
 # # 1)
-for emp in employees:
-    total=len(employees)
+
+total=len(employees)
 print(total)
 
 # # # 2)
