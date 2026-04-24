@@ -29,4 +29,8 @@ This journey focuses on building strong foundations in Python, SQL, Excel, and P
 - Power BI  
 
 
+
+
+## 🚀 Status
+
 In Progress...
