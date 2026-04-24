@@ -5,8 +5,8 @@ age=25
 salary=50000.0
 is_working=True
 
-Print(name)
-Print(age)
+print(name)
+print(age)
 print(salary)
 print(is_working)
 
