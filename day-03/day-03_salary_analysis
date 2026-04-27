@@ -1,0 +1,37 @@
+# Day 3: Salary Analysis
+
+employees = [
+    {"name": "Anu", "age": 23, "salary": 80000},
+    {"name": "Rahul", "age": 24, "salary": 34000},
+    {"name": "Meena", "age": 20, "salary": 24000},
+    {"name": "Arjun", "age": 21, "salary": 80000},
+    {"name": "Diya", "age": 26, "salary": 60000}
+]
+
+# Highest salary employee
+highest_emp = max(employees, key=lambda x: x["salary"])
+print("Highest Salary:", highest_emp["salary"])
+print("Employee:", highest_emp["name"])
+
+# Lowest salary employee
+lowest_emp = min(employees, key=lambda x: x["salary"])
+print("Lowest Salary:", lowest_emp["salary"])
+print("Employee:", lowest_emp["name"])
+
+# Average salary
+avg_salary = sum(emp["salary"] for emp in employees) / len(employees)
+print("Average Salary:", avg_salary)
+
+# Employees above average
+above_avg = [emp["name"] for emp in employees if emp["salary"] > avg_salary]
+print("Above Average Employees:", above_avg)
+
+# Employees below average
+below_avg = [emp["name"] for emp in employees if emp["salary"] < avg_salary]
+print("Below Average Employees:", below_avg)
+
+# Count & Percentage
+count = len(above_avg)
+percentage = (count / len(employees)) * 100
+
+print(f"{count} employees earn above average ({percentage:.2f}%)")
