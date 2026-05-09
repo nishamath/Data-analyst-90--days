@@ -1,66 +1,167 @@
-# LOOPS + CONDITIONS
+# -----------------------------------------
+# LOOPS + CONDITIONS PRACTICE
+# -----------------------------------------
 
-age=20
-if age>=18:
+# Simple if-else condition
+
+age = 20
+
+if age >= 18:
     print("Adult")
 else:
     print("Minor")
 
 
-employees=[
-    {"name":"Anu","age":23,"salary":40000},
-    {"name":"Rahul","age":24,"salary":34000},
-    {"name":"Meena","age":20,"salary":24000},
-    {"name":"Arjun","age":21,"salary":80000},
-    {"name":"Diya","age":26,"salary":60000} 
+# -----------------------------------------
+# Employee Dataset
+# -----------------------------------------
+
+employees = [
+    {"name": "Anu", "age": 23, "salary": 40000},
+    {"name": "Rahul", "age": 24, "salary": 34000},
+    {"name": "Meena", "age": 20, "salary": 24000},
+    {"name": "Arjun", "age": 21, "salary": 80000},
+    {"name": "Diya", "age": 26, "salary": 60000}
 ]
 
-# Find employees with salary>40000
-salary_N=40000
-for emp in employees:
-    if emp["salary"]>salary_N:
-        print(emp["name"])
-# -----------------------------------------------
 
-# high_salary=[]
+# -----------------------------------------
+# Find employees with salary > 40000
+# -----------------------------------------
+
+salary_limit = 40000
+
+print("\nEmployees with salary greater than 40000:")
+
 for emp in employees:
-    if emp["salary"]>40000:
+    if emp["salary"] > salary_limit:
+        print(emp["name"])
+
+
+# -----------------------------------------
+# Store high salary employees in list
+# -----------------------------------------
+
+high_salary = []
+
+for emp in employees:
+    if emp["salary"] > 40000:
         high_salary.append(emp["name"])
-print(high_salary)
-# -------------------------------------------------------
+
+print("\nHigh Salary Employees:", high_salary)
 
 
-# LIST COMPREHENSION (PROFESSIONAL WAY)
+# -----------------------------------------
+# List Comprehension (Professional Way)
+# -----------------------------------------
+
+high_salary_comp = [
+    emp["name"]
+    for emp in employees
+    if emp["salary"] > 40000
+]
+
+print("\nUsing List Comprehension:", high_salary_comp)
 
 
+# -----------------------------------------
+# Find employees with age < 25
+# -----------------------------------------
 
-
-# Find employees with age <25
+print("\nEmployees with age less than 25:")
 
 for emp in employees:
-    if emp["age"]<25:
+    if emp["age"] < 25:
         print(emp["name"])
 
-# Number of high salary employees
+
+# -----------------------------------------
+# Count high salary employees
+# -----------------------------------------
+
+count = 0
+
 for emp in employees:
-    if emp['salary']>40000:
-        print(len('salary'))     #   WRONG (salary is just a word(string))   --Length of 'salary'=6
-# so it will always print 6,not count employees
+    if emp["salary"] > 40000:
+        count += 1
+
+print("\nNumber of High Salary Employees:", count)
 
 
-# CORRECT WAY 
+# -----------------------------------------
+# Another Professional Counting Method
+# -----------------------------------------
+
+high_salary_names = [
+    emp["name"]
+    for emp in employees
+    if emp["salary"] > 40000
+]
+
+print("\nEmployees:", high_salary_names)
+print("Count:", len(high_salary_names))
 
 
-count=0
+# -----------------------------------------
+# Average Salary
+# -----------------------------------------
+
+total_salary = 0
+
 for emp in employees:
-    if emp['salary']>40000:
-        count+=1
-print("High salary employees:",count)
-# --------------------------------------------------------------------
+    total_salary += emp["salary"]
 
-high_salary=[]
+average_salary = total_salary / len(employees)
+
+print("\nAverage Salary:", average_salary)
+
+
+# -----------------------------------------
+# Highest Salary Employee
+# -----------------------------------------
+
+highest_salary_emp = employees[0]
+
 for emp in employees:
-    if emp['salary']>40000:
-        high_salary.append(emp['name'])
-print("Employees:",high_salary)
-print("Count:",len(high_salary))
+    if emp["salary"] > highest_salary_emp["salary"]:
+        highest_salary_emp = emp
+
+print("\nHighest Salary Employee:")
+print(highest_salary_emp["name"], "-", highest_salary_emp["salary"])
+
+
+# -----------------------------------------
+# Lowest Salary Employee
+# -----------------------------------------
+
+lowest_salary_emp = employees[0]
+
+for emp in employees:
+    if emp["salary"] < lowest_salary_emp["salary"]:
+        lowest_salary_emp = emp
+
+print("\nLowest Salary Employee:")
+print(lowest_salary_emp["name"], "-", lowest_salary_emp["salary"])
+
+
+# -----------------------------------------
+# Employees age > 22
+# -----------------------------------------
+
+print("\nEmployees with age greater than 22:")
+
+for emp in employees:
+    if emp["age"] > 22:
+        print(emp["name"])
+
+
+# -----------------------------------------
+# Total Salary Expense
+# -----------------------------------------
+
+total_expense = 0
+
+for emp in employees:
+    total_expense += emp["salary"]
+
+print("\nTotal Salary Expense:", total_expense)
