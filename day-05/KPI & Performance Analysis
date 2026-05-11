@@ -1,0 +1,22 @@
+# Day 5 – KPI & Performance Analysis
+
+## Topics Covered
+- Functions
+- KPI Analysis
+- Filtering with conditions
+- `max()` with `lambda`
+
+## Tasks
+- Calculated average KPI
+- Identified employees above average KPI
+- Found top performer
+- Analyzed high salary but low KPI employees
+
+## Key Learning
+KPI helps companies measure employee performance and compare compensation with productivity.
+
+## Business Insight
+Employees with high salary but low KPI may require performance review or training.
+
+## File
+- `day-05_kpi_analysis.py`
